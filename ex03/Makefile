@@ -6,11 +6,11 @@
 #    By: amorion- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/20 09:14:58 by amorion-          #+#    #+#              #
-#    Updated: 2022/03/22 09:44:00 by amorion-         ###   ########.fr        #
+#    Updated: 2022/03/22 11:45:58 by amorion-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = Zombie.cpp ZombieHorde.cpp  main.cpp
+SRCS = Weapon.cpp  main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -18,7 +18,7 @@ CC = clang++
 
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 
-NAME = Horde
+NAME = Violence
 
 all: $(NAME)
 

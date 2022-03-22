@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/20 13:51:55 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/22 09:58:27 by amorion-         ###   ########.fr       */
+/*   Created: 2022/03/22 11:31:29 by amorion-          #+#    #+#             */
+/*   Updated: 2022/03/22 12:09:51 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-# include <iostream>
+#include "Weapon.hpp"
 
-class Zombie
+Weapon::Weapon() : _type("club")
+{}
+
+Weapon::Weapon(std::string type) : _type(type)
+{}
+
+Weapon::~Weapon()
 {
-	public:
-	Zombie(void);
-	Zombie(std::string name);
-	~Zombie(void);
+	std::cout << "Weapon Destroyed\n";
+	return;
+}
 
-	void	announce(void) const;
-	void	set_name(std::string name);
-	private:
+std::string&	Weapon::getType(void)
+{ 
+	std::string& type = _type;
+	return(type);
+}
 
-	std::string	_name;
-};
-#endif
+void	Weapon::setType(std::string type)
+{
+	_type = type;
+}

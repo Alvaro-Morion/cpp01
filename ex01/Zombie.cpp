@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 13:52:03 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/20 14:23:24 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/03/22 10:03:02 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ Zombie::~Zombie(void)
 {
 	std::cout << "Zombie " << _name << " Destroyed\n";
 	return;
+}
+
+void	Zombie::set_name(std::string name)
+{
+	_name = name;
 }
 
 void	Zombie::announce(void) const

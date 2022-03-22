@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/20 13:51:55 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/22 09:58:27 by amorion-         ###   ########.fr       */
+/*   Created: 2022/03/22 12:10:18 by amorion-          #+#    #+#             */
+/*   Updated: 2022/03/22 12:30:43 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
-# include <iostream>
+#include "HumanA.hpp"
 
-class Zombie
+HumanA::HumanA(type) : name(name), _weapon(type);
+{}
+
+HumanA::~Human()
 {
-	public:
-	Zombie(void);
-	Zombie(std::string name);
-	~Zombie(void);
+	std::cout << "HumanA destroyed\n";
+	return;
+}
 
-	void	announce(void) const;
-	void	set_name(std::string name);
-	private:
-
-	std::string	_name;
-};
-#endif
+void	HumanA::attack()
+{
+	std::cout << 
+}
