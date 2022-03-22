@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/20 14:08:09 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/20 14:45:41 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/03/22 13:36:05 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ void	ft_leaks(void)
 }
 
 int main(void)
-{
-	atexit(ft_leaks);
+{;
 	Zombie *z = newZombie("Pepe");
 
 	randomChump("Juán");
+	z->announce();
 	delete z;
 	return (0);
 }

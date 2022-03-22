@@ -6,11 +6,11 @@
 #    By: amorion- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/20 09:14:58 by amorion-          #+#    #+#              #
-#    Updated: 2022/03/22 11:45:58 by amorion-         ###   ########.fr        #
+#    Updated: 2022/03/22 13:56:00 by amorion-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = Weapon.cpp  main.cpp
+SRCS = Weapon.cpp HumanA.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
