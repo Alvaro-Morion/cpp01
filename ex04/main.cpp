@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 12:07:05 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/26 13:26:01 by amorion-         ###   ########.fr       */
+/*   Created: 2022/03/26 13:52:40 by amorion-          #+#    #+#             */
+/*   Updated: 2022/03/26 13:58:46 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
-# include "Weapon.hpp"
+#include <iostream>
 
-class	HumanA
+int main(int argc, char **argv)
 {
-	public:
-		HumanA(std::string name, Weapon &weapon);
-		~HumanA();
-
-		void	attack(void);
-	private:
-		
-		std::string	_name;
-		Weapon &_weapon;
-};
-#endif
+	std::ifstream	ifs;
+	std::ofstream	ofs
+	if(argc != 4)
+		std::cerr << "Invalid number of arguments\n";
+	
+}

@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 12:07:05 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/26 13:26:01 by amorion-         ###   ########.fr       */
+/*   Created: 2022/03/26 13:19:41 by amorion-          #+#    #+#             */
+/*   Updated: 2022/03/26 13:50:17 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
-# include "Weapon.hpp"
+#include "HumanB.hpp"
 
-class	HumanA
+HumanB::HumanB(std::string name) : _name(name)
+{}
+
+HumanB::~HumanB()
+{}
+
+void	HumanB::setWeapon(Weapon &weapon)
 {
-	public:
-		HumanA(std::string name, Weapon &weapon);
-		~HumanA();
+	_weapon = &weapon;
+}
 
-		void	attack(void);
-	private:
-		
-		std::string	_name;
-		Weapon &_weapon;
-};
-#endif
+void	HumanB::attack(void)
+{
+	if(_weapon)
+		std::cout << _name << " attacks with his " << _weapon->getType() << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 12:10:18 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/22 14:31:52 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/03/26 13:33:43 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,7 @@ HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weapon(weapon)
 {}
 
 HumanA::~HumanA(void)
-{
-	std::cout << "HumanA destroyed\n";
-	return;
-}
+{}
 
 void	HumanA::attack(void)
 {
