@@ -6,11 +6,11 @@
 #    By: amorion- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/20 09:14:58 by amorion-          #+#    #+#              #
-#    Updated: 2022/03/26 13:29:16 by amorion-         ###   ########.fr        #
+#    Updated: 2022/03/27 14:14:32 by amorion-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = Weapon.cpp HumanA.cpp HumanB.cpp main.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -18,7 +18,7 @@ CC = clang++
 
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 
-NAME = Violence
+NAME = Substitute 
 
 all: $(NAME)
 
