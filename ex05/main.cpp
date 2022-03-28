@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 12:07:05 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/28 17:29:33 by amorion-         ###   ########.fr       */
+/*   Created: 2022/03/28 17:26:18 by amorion-          #+#    #+#             */
+/*   Updated: 2022/03/28 18:02:54 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
-# include "Weapon.hpp"
+#include "Karen.hpp"
 
-class	HumanA
+int main(void)
 {
-	public:
-		HumanA(std::string name, Weapon &weapon);
-		~HumanA();
+	Karen	Karen;
 
-		void	attack(void);
-	private:
-		
-		std::string	_name;
-		Weapon &_weapon;
-};
-#endif
+	Karen.complain("DEBUG");
+	Karen.complain("INFO");
+	Karen.complain("WARNING");
+	Karen.complain("ERROR");
+	Karen.complain("safhiir");
+	return(0);
+}

@@ -6,11 +6,11 @@
 #    By: amorion- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/20 09:14:58 by amorion-          #+#    #+#              #
-#    Updated: 2022/03/28 17:00:17 by amorion-         ###   ########.fr        #
+#    Updated: 2022/03/28 17:28:08 by amorion-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp
+SRCS = Karen.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -18,7 +18,7 @@ CC = clang++
 
 FLAGS = -std=c++98 -Wall -Werror -Wextra
 
-NAME = replace 
+NAME = Karen
 
 all: $(NAME)
 

@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/26 13:52:40 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/27 14:16:56 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/03/28 18:36:16 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@ int main(int argc, char **argv)
 		std::cerr << "Invalid number of arguments\n";
 		return(1);
 	}
-	if(!argv[2] || !argv[3])
+	s1 = argv[2];
+	s2 = argv[3];
+	if(s1.empty() || s2.empty())
 	{
 		std::cerr << "String must not be empty\n";
 		return(1);
 	}
 	file = argv[1];
-	s1 = argv[2];
-	s2 = argv[3];
 	ifs.open(file);
 	if(!ifs.is_open())
 	{	
@@ -46,12 +46,16 @@ int main(int argc, char **argv)
 	ofs.open(file + ".replace");
 	if(!ofs.is_open())
 	{
-		std::cerr <<  "Unable to open " << file + ".replace" << std::endl;
+		std::cerr <<  "Unable to open/create " << file + ".replace" << std::endl;
 		ifs.close();
 		return(1);
 	}
 	while(getline(ifs, line))
-			text += line;
+	{	
+		text += line;
+		if(!ifs.eof())
+			text += "\n";
+	}
 	while((pos = text.find(s1, pos)) != text.npos)
 	{
 		text.erase(pos, s1.size());

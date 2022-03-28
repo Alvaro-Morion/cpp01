@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/22 12:07:05 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/28 17:29:33 by amorion-         ###   ########.fr       */
+/*   Created: 2022/03/28 17:05:58 by amorion-          #+#    #+#             */
+/*   Updated: 2022/03/28 18:09:12 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
-# include "Weapon.hpp"
+#ifndef KAREN_HPP
+# define KAREN_HPP
+# include <iostream>
 
-class	HumanA
+class	Karen
 {
 	public:
-		HumanA(std::string name, Weapon &weapon);
-		~HumanA();
+		Karen();
+		~Karen();
 
-		void	attack(void);
+		void	complain(std::string level) const;
 	private:
-		
-		std::string	_name;
-		Weapon &_weapon;
+		void	debug(void) const;	
+		void	info(void)	const;
+		void	warning(void)	const;
+		void	error(void)	const;
 };
 #endif
