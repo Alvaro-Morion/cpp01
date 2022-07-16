@@ -6,7 +6,7 @@
 /*   By: amorion- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 11:31:29 by amorion-          #+#    #+#             */
-/*   Updated: 2022/03/26 13:34:43 by amorion-         ###   ########.fr       */
+/*   Updated: 2022/07/16 11:53:16 by amorion-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Weapon::Weapon(std::string type) : _type(type)
 Weapon::~Weapon()
 {}
 
-std::string&	Weapon::getType(void)
+std::string const	& Weapon::getType(void)
 { 
 	std::string& type = _type;
 	return(type);
